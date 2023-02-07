@@ -18,13 +18,25 @@ form.addEventListener("submit", (e) => {
 });
 
 passInput.addEventListener("blur", function () {
-  this.value.trim().length < 6 && passError.classList.remove("hidden");
-  this.value.trim().length >= 6 && passError.classList.add("hidden");
+  if (this.value.trim().length < 6) {
+    passError.classList.remove("hidden");
+    this.parentElement.classList.add("error");
+  }
+  if (this.value.trim().length >= 6) {
+    passError.classList.add("hidden");
+    this.parentElement.classList.remove("error");
+  }
 });
 
 checkPassInput.addEventListener("blur", function () {
-  this.value !== passInput.value && checkPassError.classList.remove("hidden");
-  this.value === passInput.value && checkPassError.classList.add("hidden");
+  if (this.value !== passInput.value) {
+    checkPassError.classList.remove("hidden");
+    this.parentElement.classList.add("error");
+  }
+  if (this.value === passInput.value) {
+    checkPassError.classList.add("hidden");
+    this.parentElement.classList.add("error");
+  }
 });
 
 showPasswordButton.addEventListener("click", () => {
@@ -34,5 +46,8 @@ showPasswordButton.addEventListener("click", () => {
 });
 
 editPasswordButton.addEventListener("click", () => {
-  allErrorMessage.map((message) => message.classList.remove("hidden"));
+  allErrorMessage.map((message) => {
+    message.classList.remove("hidden");
+    message.parentElement.previousElementSibling.classList.add("error");
+  });
 });
