@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600&display=swap');
+
+:root {
+    --blue1: #2B689B;
+    --blue2: #6B95B9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;    
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#F5FCFE, #fff);
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.passform {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow:  0px 0px 6px  4px rgba(14, 76, 121, 0.18);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 500px;
+}
+
+.passform_header {
+    margin-bottom: 50px;
+}
+
+.passform_title {
+    color: var(--blue1);
+    font-family:'Manrope', sans-serif;
+    font-size: 28px;
+     margin-bottom: 50px;
+}
+
+.passform_input {
+    width: 100%;
+}
+
+.passform_input_container {
+    width: 100%;
+    border-bottom: solid 2px var(--blue2);
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+span {
+    color: #FFB6C1;
+}
+
+.passform_input_data {
+    border: none;
+    outline: none;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    flex: 1 auto;
+    padding: 0 5px;
+}
+
+.passform_input_showbtn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background: none;
+    background-image: url('./images/eye.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.passform_input_data::placeholder {
+    color: var(--blue2);
+    
+}
+
+.passform_input_errmessage {
+    height: 30px;
+    color: #F13F58;
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.passform_annotation {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--blue1);
+    align-self: flex-start;
+    padding-left: 10px;
+    margin: 30px 0;
+}
+
+.passform_button_editpass {
+    background-color: #FFE292;
+    font-size: 17px;
+    color: #0E406A;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 35px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: ease-in .3s;
+}
+
+.passform_button_editpass:hover {
+    transform: scale(1.05);
+}
+
+.passform_button_editpass:active {
+    transform: translateX(3px);
+}
+
+.arrow {
+    display: inline-block;
+    width: 35px;
+    height: 10px;
+    background-image: url('./images/Arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.passform_buttons_container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.passform_buttons_button {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--blue1);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+
+.passform_buttons_button:hover {
+    border-bottom: 2px solid var(--blue1);
+}
+
+.enter {
+    color: #3D7FB7;
+}
+
+.enter:hover {
+    border-bottom: 2px solid #3D7FB7;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border-bottom: solid 2px #F57272;
+}
+
+@media (max-width: 500px) {
+    /*это все можно было бы сделать поменяв просто общий размер шрифта через относительные единицы
+    но размеры шрифтов изменены не пропорционально*/
+    .passform {
+        padding: 30px;
+    }
+    
+    .passform_title {
+        font-size: 20px;
+    }
+    .passform_input_data {
+        font-size: 15px;
+    }
+    .passform_input_errmessage {
+        font-size: 13px;
+    }
+    .passform_annotation {
+        font-size: 15px;
+    }
+    .passform_buttons_button {
+        font-size: 15px;
+    }
+    .passform_button_editpass {
+        font-size: 16px;
+    }
+}

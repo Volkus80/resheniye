@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение тестовое</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <form class="passform">
+            <div class="passform_header">
+                <img src="./images/logo.png" alt="logo" class="passform_header_logo">
+            </div>
+            <h1 class="passform_title">Изменение пароля</h1>
+            <div class="passform_input">
+                <div class="passform_input_container">
+                    <span>*</span>
+                    <input class="passform_input_data" type="text" placeholder="Email / Логин">
+                </div>
+                <div class="passform_input_errmessage"></div>
+            </div>
+            <div class="passform_input">
+                <div class="passform_input_container">
+                    <span>*</span>
+                    <input class="passform_input_data" type="text" placeholder="Контрольная строка">
+                </div>
+                <div class="passform_input_errmessage">
+                    <p class="passform_input_errmessage_text ident_err hidden">Неверное контрольное слово</p>
+                </div>
+            </div>
+            <div class="passform_input">
+                <div class="passform_input_container">
+                    <span>*</span>
+                    <input class="passform_input_data password" type="password" placeholder="Новый пароль">
+                    <button class="passform_input_showbtn"></button>
+                </div>
+                <div class="passform_input_errmessage">
+                    <p class="passform_input_errmessage_text firstpass_err hidden">Пароль должен быть не менее 6 символов</p>
+                </div>
+            </div>
+            <div class="passform_input">
+                <div class="passform_input_container">
+                    <span>*</span>
+                    <input class="passform_input_data check_password" type="password" placeholder="Подтверждение пароля">
+                </div>
+                <div class="passform_input_errmessage">
+                    <p class="passform_input_errmessage_text secondpass_err hidden">Пароли не совпадают</p>
+                </div>
+            </div>
+            <p class="passform_annotation">
+                <span>*</span> Обязательные поля
+            </p>
+            <div>
+                <button class="passform_button_editpass">Изменить пароль <span class="arrow"></span></button>
+                <div class="passform_buttons_container">
+                    <button class="passform_buttons_button reg">Зарегестрироваться</button>
+                    <button class="passform_buttons_button enter">Войти</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>
