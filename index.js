@@ -35,7 +35,7 @@ checkPassInput.addEventListener("blur", function () {
   }
   if (this.value === passInput.value) {
     checkPassError.classList.add("hidden");
-    this.parentElement.classList.add("error");
+    this.parentElement.classList.remove("error");
   }
 });
 
